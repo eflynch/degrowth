@@ -1,13 +1,13 @@
-import { useReducer } from 'react';
-import './App.css';
-import Context from '../controller/Context';
-import Page from './Page';
+import { useReducer } from "react";
+import "./App.css";
+import Context from "../controller/Context";
+import Page from "./Page";
 
-import reducer from '../controller/Reducer';
-import { initialState } from '../controller/State';
+import reducer from "../controller/Reducer";
+import { initialState } from "../controller/State";
 
 function App() {
-  const [state, dispatcher] =  useReducer(reducer, initialState)
+  const [state, dispatcher] = useReducer(reducer, initialState);
   return (
     <div className="App">
       <Context.Provider value={dispatcher}>
