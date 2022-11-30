@@ -6,8 +6,8 @@ export default function Growth(props:PageProps): ReactElement {
   const goToHome = useAction(["GoHome", {}])
   return (
     <>
+      <h1>Growth Sucks</h1>
       <button onClick={goToHome}>Go Home</button>
-      <h1>Growth</h1>
     </>
   );
 }

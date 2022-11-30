@@ -6,7 +6,8 @@ export default function Landing(props:PageProps): ReactElement {
   const goToGrowth = useAction(["GoToPage", { page: "Growth" }]);
   return (
     <>
-      <button onClick={goToGrowth}>Growth</button>
+      <h1>Degrowth is Dope</h1>
+      <button onClick={goToGrowth}>Learn About Growth</button>
     </>
   );
 }
