@@ -1,4 +1,4 @@
-import { PageName } from "../components/Page";
+import { PageName } from "../components/Page.interface";
 
 type GoToPage = [
   "GoToPage",

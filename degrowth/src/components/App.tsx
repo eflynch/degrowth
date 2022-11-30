@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
 import "./App.css";
 import Context from "../controller/Context";
 import Page from "./Page";
@@ -8,10 +8,15 @@ import { initialState } from "../controller/State";
 
 function App() {
   const [state, dispatcher] = useReducer(reducer, initialState);
+
+  useEffect(()=>{
+    window.localStorage.setItem("state", JSON.stringify(state)) 
+  }, [state])
+
   return (
     <div className="App">
       <Context.Provider value={dispatcher}>
-        <Page name={state.page} />
+        <Page state={state} />
       </Context.Provider>
     </div>
   );
